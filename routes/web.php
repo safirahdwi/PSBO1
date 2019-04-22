@@ -15,8 +15,14 @@
     return view('welcome');
 });*/
 
-Route::get('/', function () {
-    return view('coming-soon');
+// Route::get('/', function () {
+//     return view('coming-soon');
+// });
+
+Route::get('/', 'IndexController@index');
+
+Route::get('/registure', function () {
+    return view('auth/register');
 });
 
 Route::match(['get', 'post'], '/admin','AdminController@login');
