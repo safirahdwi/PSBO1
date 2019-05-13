@@ -76,6 +76,16 @@ class ProductsController extends Controller
             $products[$key]->category_name = $category_name->name;
         }
         //echo "<pre>"; print_r($products); die;
-        return view('admin.products.view_products')->with(compact('products'));
+        return view('admin.products.view_products')->with(compact('products'));  
+    }
+
+    public function products($url = null){
+
+        // Get all Categories and Sub Categories
+        $categories = Category::with('categories')->where(['parent_id'=>0])->get();
+
+        $categoryDetails = Category::where(['url' => $url])->first();
+        $productsAll = Product ::where(['category_id' => $categoryDetails->id])->get();
+        return view('products.listing')->with(compact('categories','categoryDetails','productsAll'));
     }
 }

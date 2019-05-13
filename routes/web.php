@@ -31,6 +31,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Category/Listing Page
+Route::get('/products/{url}','ProductsController@products');
+
 Route::group(['middleware' => ['auth']],function(){
 	Route::get('/admin/dashboard','AdminController@dashboard');	
 	Route::get('/admin/settings','AdminController@settings');
@@ -46,6 +49,7 @@ Route::group(['middleware' => ['auth']],function(){
 	// Products Routes
 	Route::match(['get','post'],'/admin/add-product','ProductsController@addProduct');
 	Route::get('/admin/view-products','ProductsController@viewProducts');
+
 });
 
 

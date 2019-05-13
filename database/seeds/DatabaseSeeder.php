@@ -19,4 +19,4 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('12345678'),
         ]);
     }
-} 
+}
