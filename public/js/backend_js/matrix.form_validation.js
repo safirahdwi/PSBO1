@@ -113,6 +113,38 @@ $(document).ready(function(){
 		}
 	});
 
+	
+	// Edit Product Validation
+    $("#edit_product").validate({
+		rules:{
+			category_id:{
+				required:true
+			},
+			product_name:{
+				required:true
+			},
+			product_code:{
+				required:true,
+			},
+			product_color:{
+				required:true,
+			},
+			price:{
+				required:true,
+				number:true
+			}
+		},
+		errorClass: "help-inline",
+		errorElement: "span",
+		highlight:function(element, errorClass, validClass) {
+			$(element).parents('.control-group').addClass('error');
+		},
+		unhighlight: function(element, errorClass, validClass) {
+			$(element).parents('.control-group').removeClass('error');
+			$(element).parents('.control-group').addClass('success');
+		}
+	});
+
 	// Edit Category Validation
     $("#edit_category").validate({
 		rules:{
@@ -198,6 +230,35 @@ $(document).ready(function(){
 			return true;
 		}
 		return false;
+	});
+
+	/*$("#delProduct").click(function(){
+		if(confirm('Are you sure you want to delete this Product?')){
+			return true;
+		}
+		return false;
+	});*/
+
+	$(".deleteRecord").click(function(e){
+		var id = $(this).attr('rel');
+		var deleteFunction = $(this).attr('rel1');
+		swal({
+					title: 'Are you sure?',
+					text: "You won't be able to revert this!",
+					type: 'warning',
+					showCancelButton: true,
+					confirmButtonColor: '#3085d6',
+					cancelButtonColor: '#d33',
+					confirmButtonText: 'Yes, delete it!',
+					cancelButtonText: 'No, cancel',
+					confirmButtonClass: 'btn btn-succes',
+					cancelButtonClass: 'btn btn-danger',
+					buttonStyling: false,
+					reverseButtons: true
+		},
+		function(){
+			window.location.href="/admin/"+deleteFunction+"/"+id;
+		});
 	});
 
 });
