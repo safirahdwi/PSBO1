@@ -31,6 +31,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Category/Listing Page
+Route::get('/products/{url}','ProductsController@products');
+
 Route::group(['middleware' => ['auth']],function(){
 	Route::get('/admin/dashboard','AdminController@dashboard');	
 	Route::get('/admin/settings','AdminController@settings');
@@ -47,8 +50,12 @@ Route::group(['middleware' => ['auth']],function(){
 	Route::match(['get','post'],'/admin/add-product','ProductsController@addProduct');
 	Route::match(['get', 'post'],'/admin/edit-product/{id}', 'ProductsController@editProduct');
 	Route::get('/admin/view-products','ProductsController@viewProducts');
+<<<<<<< HEAD
 	ROute::get('/admin/delete-product/{id}', 'ProductsController@deleteProduct');
 	ROute::get('/admin/delete-product-image/{id}', 'ProductsController@deleteProductImage');
+=======
+
+>>>>>>> aba2fbdd49e1aa0a9a121a3a02bab4ab79d14e96
 });
 
 
