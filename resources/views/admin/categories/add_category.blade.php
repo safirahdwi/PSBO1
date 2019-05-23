@@ -24,11 +24,11 @@
               <div class="control-group">
                 <label class="control-label">Category Level</label>
                 <div class="controls">
-                <select name="parent_id" style="width: 220px;">
-                  <option value="0">Main Category</option>
-                  @foreach($levels as $val)
-                    <option value="{{ $val->id }}"> {{ $val->name }}</option>
-                  @endforeach
+                  <select name="parent_id" style="width: 220px;">
+                    <option value="0">Main Category</option>
+                    @foreach($levels as $val)
+                      <option value="{{ $val->id }}">{{ $val->name }}</option>
+                    @endforeach
                   </select>
                 </div>
           
@@ -42,6 +42,12 @@
                 <label class="control-label">URL</label>
                 <div class="controls">
                   <input type="text" name="url" id="url">
+                </div>
+              </div>
+               <div class="control-group">
+                <label class="control-label">Enable</label>
+                <div class="controls">
+                  <input type="checkbox" name="status" id="status" value="1">
                 </div>
               </div>
               <div class="form-actions">
