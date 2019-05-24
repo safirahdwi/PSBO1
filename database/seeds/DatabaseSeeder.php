@@ -1,8 +1,7 @@
 <?php
 
-use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,8 +13,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => Str::random(10).'admin',
-            'email' => Str::random(10).'admin@gmail.com',
+            'name' => str_random(10).'Admin',
+            'email' => str_random(10).'admin@gmail.com',
             'password' => bcrypt('12345678'),
         ]);
     }

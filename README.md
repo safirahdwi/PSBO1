@@ -1,12 +1,8 @@
-# make-admin-panel-in-laravel-5.6
-Make E-commerce website in Laravel 5.6 | Make Admin Panel in Laravel 5.6
+# make-ecom-in-laravel-5.6
+Make E-commerce Website in Laravel 5.6 (Up till Part 57)
 
-Uptill Part 9: Make E-commerce website in Laravel 5.6 | Part 20: Make Admin Panel in Laravel 5.6
+Follow Step by Step Instructions / Youtube Video Tutorial :-
+https://www.youtube.com/playlist?list=PLLUtELdNs2ZZT3d9RQfgZLn6vbo5vbXCN
 
-Video Tutorial :- https://www.youtube.com/playlist?list=PLLUtELdNs2ZY5drPxIWzpq5crhantlzp7
-
-
-
-
-
-
+Start with Admin Panel if not have one :-
+https://www.youtube.com/playlist?list=PLLUtELdNs2ZY5drPxIWzpq5crhantlzp7

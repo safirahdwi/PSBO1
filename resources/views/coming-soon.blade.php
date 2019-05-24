@@ -65,9 +65,9 @@
         </style>
     </head>
     <body>
-        <div align="center"><h1>SAMPLE</h1></div>
+        <div align="center"><h1>ECOM</h1></div>
         <div class="flex-center position-ref">
-            <img src="{{ asset('images/coming-soon.png') }}">
+            <img src="{{ asset('images/frontend_images/coming-soon.png') }}">
         </div>
     </body>
 </html>

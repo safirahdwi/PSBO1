@@ -31,7 +31,7 @@
                 <label class="control-label">Under Category</label>
                 <div class="controls">
                   <select name="category_id" id="category_id" style="width:220px;">
-                    <?php echo $categories_dropdown; ?>
+                    <?php echo $categories_drop_down; ?>
                   </select>
                 </div>
               </div>
@@ -85,7 +85,7 @@
                         </td>
                         <td>
                           @if(!empty($productDetails->image))
-                            <img style="width:30px;" src="{{ asset('/images/backend_images/products/small/'.$productDetails->image) }}"> | <a href="{{ url('/admin/delete-product-image/'.$productDetails->id) }}">Delete</a>
+                            <img style="width:30px;" src="{{ asset('/images/backend_images/product/small/'.$productDetails->image) }}"> | <a href="{{ url('/admin/delete-product-image/'.$productDetails->id) }}">Delete</a>
                           @endif
                         </td>
                       </tr>
