@@ -12,12 +12,21 @@ class CategoryController extends Controller
     public function addCategory(Request $request){
     	if($request->isMethod('post')){
     		$data = $request->all();
+<<<<<<< HEAD
     		//echo "<pre>"; print_r($data); die;
 
             if(empty($data['status'])){
                 $status='0';
             }else{
                 $status='1';
+=======
+    		/*echo "<pre>"; print_r($data); die;*/
+
+            if(empty($data['status'])){
+                $status = 0;
+            }else{
+                $status = 1;
+>>>>>>> refs/remotes/origin/master
             }
 
     		$category = new Category;
@@ -38,6 +47,7 @@ class CategoryController extends Controller
 
         if($request->isMethod('post')){
             $data = $request->all();
+<<<<<<< HEAD
             /*echo "<pre>"; print_r($data); */
 
             if(empty($data['status'])){
@@ -48,6 +58,18 @@ class CategoryController extends Controller
 
             Category::where(['id'=>$id])->update(['status'=>$status,'name'=>$data['category_name'],'parent_id'=>$data['parent_id'],'description'=>$data['description'],'url'=>$data['url']]);
             return redirect()->back()->with('flash_message_success', 'Category has been updated successfully');
+=======
+            //echo "<pre>"; print_r($data); die;
+
+             if(empty($data['status'])){
+                $status = 0;
+            }else{
+                $status = 1;
+            }
+
+            Category::where(['id'=>$id])->update(['name'=>$data['category_name'],'description'=>$data['description'],'url'=>$data['url'], 'status'=>$status]);
+            return redirect('/admin/view-categories')->with('flash_message_success','Category updated Successfully!');
+>>>>>>> refs/remotes/origin/master
         }
 
         $categoryDetails = Category::where(['id'=>$id])->first();

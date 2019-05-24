@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 <?php use App\Http\Controllers\Controller;
 $mainCategories =  Controller::mainCategories();
+=======
+<?php
+use App\Http\Controllers\Controller;
+$mainCategories = Controller::mainCategories();
+>>>>>>> refs/remotes/origin/master
 ?>
 <header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
@@ -92,8 +98,15 @@ $mainCategories =  Controller::mainCategories();
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                     	@foreach($mainCategories as $cat)
+<<<<<<< HEAD
                                         	<li><a href="{{ asset('products/'.$cat->url) }}">{{ $cat->name }}</a></li>
 										@endforeach
+=======
+                                    		@if($cat->status=="1")
+                                        		<li><a href="{{ asset('products/'.$cat->url) }}">{{ $cat->name }}</a></li>
+                                        	@endif
+                                        @endforeach
+>>>>>>> refs/remotes/origin/master
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>

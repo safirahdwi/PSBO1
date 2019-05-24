@@ -8,14 +8,21 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Category;
 
+use App\Category;
+
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public static function mainCategories(){
     	$mainCategories = Category::where(['parent_id' => 0])->get();
+<<<<<<< HEAD
     	$mainCategories = json_decode(json_encode($mainCategories));
     	/*echo "<pre>"; print_r($mainCategories); die;*/
+=======
+    	/*$mainCategories = json_decode(json_encode($mainCategories));
+    	echo "<pre>"; print_r($mainCategories);*/
+>>>>>>> refs/remotes/origin/master
     	return $mainCategories;
     }
 }

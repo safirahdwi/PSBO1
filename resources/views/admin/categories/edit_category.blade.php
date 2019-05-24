@@ -59,7 +59,11 @@
               <div class="control-group">
                 <label class="control-label">Enable</label>
                 <div class="controls">
+<<<<<<< HEAD
                   <input type="checkbox" name="status" id="status" @if($categoryDetails->status == "1") checked @endif value="1">
+=======
+                  <input type="checkbox" name="status" id="status" @if($categoryDetails->status=="1") checked @endif value="1">
+>>>>>>> refs/remotes/origin/master
                 </div>
               </div>
               <div class="form-actions">
