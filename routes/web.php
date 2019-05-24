@@ -75,7 +75,6 @@ Route::group(['middleware' => ['auth']], function () {
 	// Admin Products Routes
 	Route::match(['get','post'],'/admin/add-product','ProductsController@addProduct');
 	Route::match(['get','post'],'/admin/edit-product/{id}','ProductsController@editProduct');
-<<<<<<< HEAD
 	Route::get('/admin/delete-product/{id}','ProductsController@deleteProduct');
 	Route::get('/admin/view-products','ProductsController@viewProducts');
 	Route::get('/admin/delete-product-image/{id}','ProductsController@deleteProductImage');
@@ -99,14 +98,6 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::match(['get','post'],'/admin/edit-banner/{id}','BannersController@editBanner');
 	Route::get('admin/view-banners','BannersController@viewBanners');
 	Route::get('/admin/delete-banner/{id}','BannersController@deleteBanner');
-=======
-	Route::get('/admin/view-products','ProductsController@viewProducts');
-	Route::get('/admin/delete-product/{id}','ProductsController@deleteProduct');
-	Route::get('/admin/delete-product-image/{id}','ProductsController@deleteProductImage');
-
-	// Products Attributes Routes
-	Route::match(['get','post'],'admin/add-attributes/{id}','ProductsController@addAttributes');
->>>>>>> refs/remotes/origin/master
 });
 
 
